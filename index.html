@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
@@ -15,28 +17,60 @@
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="box">
+      <div class="main">
+        <h1 class="header">
+          Learn to code by watching others
+        </h1>
+        <p class="description">
+          See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+          but understanding how developers think is invaluable. 
+        </p>
+      </div>
 
-  Learn to code by watching others
+      <div class="card-form">
+        <p class="banner">
+          <strong>
+            Try it free 7 days 
+          </strong>then $20/mo. thereafter
+        </p>
+        <form>
+          <div class="int-field">
+            <span class="exclamation ">!</span>
+            <input type="text" name="firstname" id="firstname int" placeholder="First Name" required>
+            <p class="message"></p>
+          </div>
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
+          <div class="int-field">
+            <span class="exclamation ">!</span>
+            <input type="text" name="lastname" id="lastname int" placeholder="Last Name" required>
+            <p class="message"></p>
+          </div>
 
-  Try it free 7 days then $20/mo. thereafter
+          <div class="int-field">
+            <span class="exclamation ">!</span>
+            <input type="email" name="email" id="email int" placeholder="Email Address" autocomplete="off" required>
+            <p class="message"></p>
+          </div>
 
-  First Name 
-  Last Name 
-  Email Address
-  Password
+          <div class="int-field">
+            <span class="exclamation ">!</span>
+            <input type="text" name="password" id="password int" placeholder="Password" required>
+            <p class="message"></p>
+          </div>
 
-  Claim your free trial 
+          <input type="submit" value="Claim your free trial" id="submit">
+          <br>
 
-  By clicking the button, you are agreeing to our Terms and Services
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+          <span class="agreement">
+            By clicking the button, you are agreeing to our <strong class="agree-strong">Terms and Services</strong>  
+          </span>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
