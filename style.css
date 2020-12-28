@@ -19,15 +19,18 @@ body{
   font-family: var(--font-fam);
 }
 
+/* ------------ center everything  --- */
 .container{
   display: flex;
   justify-content: center;
-  width: 900px;
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* ------------ make the content inside to be centered --- */
 .box{
   display: flex;
   justify-content: center;
@@ -37,6 +40,8 @@ body{
 .main{
   color: white;
 }
+
+/* ------------ change the header and paragraph styles --- */
 .header{
   width: 500px;
   line-height: 60px;
@@ -47,6 +52,7 @@ body{
   width: 500px;
 }
 
+/* ------------ declare style for form --- */
 .card-form{
   height: 400px;
   width: 500px;
@@ -61,6 +67,8 @@ form{
   padding: 40px 40px 0px 50px;
   text-align: center;
 }
+
+/* ------------ input field styles --- */
 .int-field{
   margin-bottom: 15px;
   position: relative;
@@ -75,6 +83,8 @@ input{
 input:focus{
   outline: none;
 }
+
+/* ------------ exclamation points  --- */
 .exclamation{
   position: absolute;
   background-color: red;
@@ -99,6 +109,8 @@ input:focus{
 #submit:hover{
   background-color: hsl(154, 76%, 61%);
 }
+
+/* ------------ agreement font styles --- */
 .agreement{
   font-size: 10px;
   opacity: .7;
@@ -107,6 +119,8 @@ input:focus{
   opacity: 1;
   color: var(--Red);
 }
+
+/* ------------ banner position and styles --- */
 .banner{
   position: absolute;
   top: -20%;
@@ -128,4 +142,70 @@ input:focus{
 }
 .placeholder-color::-webkit-input-placeholder{
   color: red;
+}
+
+
+@media (max-width: 375px){
+  .container{
+    margin-top: 150px;
+  }
+  .box{
+    flex-direction: column;
+  }
+  .main{
+    text-align: center;
+  }
+  .header{
+    font-size: 1.5em;
+    word-wrap: break-word;
+    width: 300px;
+    line-height: 35px;
+  }
+  .description{
+    font-size: 16px;
+    max-width: 320px;
+    margin: 20px auto;
+  }
+  /* ------------ move banner --- */
+  .banner{
+    text-align: center;
+    font-size: 16px;
+    padding: 15px 30px;
+    left: 50%;
+    top: -22%;
+    transform: translateX(-50%);
+    width: 320px;
+  }
+  /* ------------ change form's width and padding --- */
+  form{
+    padding: 0px;
+    margin: 20px;
+    width: 290px;
+  }
+  .card-form{
+    text-align: center;
+    margin-top: 100px;
+    width: 320px;
+    height: 450px;
+    margin: 150px 0 30px 0;
+  }
+  .int-field{
+    width: 290px;
+  }
+  .exclamation{
+    left: 80%;
+    padding: 5px 3px;
+  }
+  .error{
+    position:absolute;
+    width: 200px;
+    transform: translateX(-40%);
+  }
+  input{
+    padding: 10px 40px 10px 10px;
+  }
+  #submit{
+    padding: 15px 50px;
+    width: 260px
+  }
 }
