@@ -96,6 +96,9 @@ input:focus{
   letter-spacing: 1px;
   cursor: pointer;
 }
+#submit:hover{
+  background-color: hsl(154, 76%, 61%);
+}
 .agreement{
   font-size: 10px;
   opacity: .7;
