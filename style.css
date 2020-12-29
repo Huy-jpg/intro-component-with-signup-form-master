@@ -17,7 +17,6 @@ body{
   background: url('images/bg-intro-desktop.png');
   background-color: var(--Red);
   font-family: var(--font-fam);
-  overflow-y: hidden;
 }
 
 /* ------------ center everything  --- */
@@ -26,7 +25,7 @@ body{
   justify-content: center;
   width: 100%;
   position: relative;
-  margin: 200px auto;
+  margin: 200px auto 0px auto;
 }
 
 /* ------------ make the content inside to be centered --- */
