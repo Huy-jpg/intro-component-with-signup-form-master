@@ -28,7 +28,7 @@ body{
   margin: 200px auto 0px auto;
 }
 
-/* ------------ make the content inside to be centered --- */
+/* ------------ make the content inside the container to be centered --- */
 .box{
   display: flex;
   justify-content: center;

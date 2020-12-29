@@ -11,81 +11,77 @@ const form = document.getElementById('form'),
 form.addEventListener('submit', (e) =>{
   // First Name
   if(fname.value === '' || fname.value == null){
-
+    let change = fname;
     // Add msg style & text content
     fmessage.classList.add('message')
-    fname.placeholder = ''
     fmessage.textContent = `First Name cannot be empty!`
-
-    // Change style of exclamation point and input border
-    fname.previousElementSibling.style.display = 'block'
-    fname.style.borderColor = 'red'
+    content(change);
     e.preventDefault()
 
   } else {
     // Change everything to default
-    fmessage.remove()
-    fname.previousElementSibling.style.display = 'none'
-    fname.style.borderColor = 'gray'
+    let normal = fname;
+    let errorMsg = fmessage;
+    reset(normal, errorMsg)
   }
 
   // Last Name
   if(lname.value === '' || lname.value == null){
-
+    let change = lname;
     // Add msg style & text content
     lmessage.classList.add('message')
-    lname.placeholder = ''
     lmessage.textContent = `First Name cannot be empty!`
-
-    // Change style of exclamation point and input border
-    lname.previousElementSibling.style.display = 'block'
-    lname.style.borderColor = 'red'
+    content(change);
     e.preventDefault()
 
   } else {
     // Change everything to default
-    lmessage.remove()
-    lname.previousElementSibling.style.display = 'none'
-    lname.style.borderColor = 'gray'
+    let normal = lname;
+    let errorMsg = lmessage;
+    reset(normal, errorMsg)
   }
 
   // Email
   if(email.value === '' || email.value == null){
-
+    let change = email;
     // Add msg style & text content
     emessage.classList.add('message')
-    email.placeholder = ''
     emessage.textContent = `First Name cannot be empty!`
-
-    // Change style of exclamation point and input border
-    email.previousElementSibling.style.display = 'block'
-    email.style.borderColor = 'red'
+    content(change);
     e.preventDefault()
 
   } else {
     // Change everything to default
-    emessage.remove()
-    email.previousElementSibling.style.display = 'none'
-    email.style.borderColor = 'gray'
+    let normal = email;
+    let errorMsg = emessage;
+    reset(normal, errorMsg)
   }
 
   // Password
   if(password.value === '' || password.value == null){
-
+    let change = password;
     // Add msg style & text content
     pmessage.classList.add('message')
-    password.placeholder = ''
     pmessage.textContent = `First Name cannot be empty!`
-
-    // Change style of exclamation point and input border
-    password.previousElementSibling.style.display = 'block'
-    password.style.borderColor = 'red'
+    content(change);
     e.preventDefault()
 
   } else {
     // Change everything to default
-    pmessage.remove()
-    password.previousElementSibling.style.display = 'none'
-    password.style.borderColor = 'gray'
+    let normal = password;
+    let errorMsg = pmessage;
+    reset(normal, errorMsg)
   }
 })
+// Error Message
+function content(change){
+  change.previousElementSibling.style.display = 'block';
+  change.placeholder = ''
+  change.style.borderColor = 'red'
+}
+// Disable Error Message
+function reset(normal, errorMsg){
+  normal.style.borderColor = 'gray'
+  normal.previousElementSibling.style.display = 'none';
+  errorMsg.remove();
+}
