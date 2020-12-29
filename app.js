@@ -9,7 +9,7 @@ const form = document.getElementById('form'),
       password = document.getElementById('password');
 
 form.addEventListener('submit', (e) =>{
-  // First Name Error
+  // First Name
   if(fname.value === '' || fname.value == null){
 
     // Add msg style & text content
@@ -22,74 +22,70 @@ form.addEventListener('submit', (e) =>{
     fname.style.borderColor = 'red'
     e.preventDefault()
 
-  } // First Name if filled out
-    else if (fname.value !== null){
-
+  } else {
     // Change everything to default
     fmessage.remove()
     fname.previousElementSibling.style.display = 'none'
     fname.style.borderColor = 'gray'
   }
 
+  // Last Name
+  if(lname.value === '' || lname.value == null){
 
-  // Last Name Error
-   if(lname.value === '' || lname.value == null){
     // Add msg style & text content
     lmessage.classList.add('message')
-    lmessage.textContent = `Last Name cannot be empty!`
+    lname.placeholder = ''
+    lmessage.textContent = `First Name cannot be empty!`
 
     // Change style of exclamation point and input border
     lname.previousElementSibling.style.display = 'block'
-    lname.placeholder = ''
     lname.style.borderColor = 'red'
     e.preventDefault()
 
-  } else if (lname.value !== null){
+  } else {
     // Change everything to default
     lmessage.remove()
     lname.previousElementSibling.style.display = 'none'
-    fname.style.borderColor = 'gray'
+    lname.style.borderColor = 'gray'
   }
 
+  // Email
+  if(email.value === '' || email.value == null){
 
-
-  // Password Error
-   if(email.value === '' || email.value == null){
-      
     // Add msg style & text content
     emessage.classList.add('message')
-    email.placeholder = 'email@example.com'
-    email.classList.add('placeholder-color')
-    emessage.textContent = `Email cannot be empty!`
+    email.placeholder = ''
+    emessage.textContent = `First Name cannot be empty!`
 
     // Change style of exclamation point and input border
     email.previousElementSibling.style.display = 'block'
     email.style.borderColor = 'red'
     e.preventDefault()
 
-  } else if (email.value !== null){
+  } else {
     // Change everything to default
     emessage.remove()
     email.previousElementSibling.style.display = 'none'
-    fname.style.borderColor = 'gray'
+    email.style.borderColor = 'gray'
   }
 
-  // Password Error
+  // Password
   if(password.value === '' || password.value == null){
+
     // Add msg style & text content
     pmessage.classList.add('message')
     password.placeholder = ''
-    pmessage.textContent = `Password cannot be empty!`
+    pmessage.textContent = `First Name cannot be empty!`
 
     // Change style of exclamation point and input border
     password.previousElementSibling.style.display = 'block'
     password.style.borderColor = 'red'
     e.preventDefault()
 
-  } else if (password.value !== null){
+  } else {
     // Change everything to default
     pmessage.remove()
     password.previousElementSibling.style.display = 'none'
-    fname.style.borderColor = 'gray'
+    password.style.borderColor = 'gray'
   }
 })
