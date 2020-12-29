@@ -83,5 +83,6 @@ function content(change){
 function reset(normal, errorMsg){
   normal.style.borderColor = 'gray'
   normal.previousElementSibling.style.display = 'none';
-  errorMsg.remove();
+  errorMsg.classList.remove();
+  errorMsg.textContent = '';
 }
